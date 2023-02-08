@@ -1,7 +1,5 @@
 # Twitter
 
-# ---------------
-
 ## Requirements of the project
 
 - User should be able to create a post
