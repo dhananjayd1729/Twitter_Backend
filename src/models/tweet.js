@@ -6,22 +6,15 @@ const tweetSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    userEmail: {
-      type: String,
-    },
-    comments: [
+    hashtags: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
+        ref: "Hashtag",
       },
     ],
   },
   { timestamps: true }
 );
-
-tweetSchema.virtual("contentWithEmail").get(function process() {
-  return `${this.content} \nCreated by: ${this.userEmail}`;
-});
 
 const Tweet = mongoose.model("Tweet", tweetSchema);
 module.exports = Tweet;
