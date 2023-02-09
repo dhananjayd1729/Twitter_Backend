@@ -1,6 +1,8 @@
-const express = require("express");
-const connect = require("./config/database");
+import express from "express";
+import connect from "./config/database.js";
 const app = express();
+
+import TweetService from "./services/tweet-service.js";
 
 const startAndPrepareServer = async () => {
   app.listen(3000, async () => {
@@ -10,7 +12,7 @@ const startAndPrepareServer = async () => {
 
     // const service = new TweetService();
     // const tweet = await service.create({
-    //   content: "Life is tough #sedlyf #relatable",
+    //   content: "How are y'all #COLLEGEmates",
     // });
 
     // console.log(tweet);
