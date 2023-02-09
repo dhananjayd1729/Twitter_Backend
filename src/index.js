@@ -12,7 +12,7 @@ const startAndPrepareServer = async () => {
 
     // const service = new TweetService();
     // const tweet = await service.create({
-    //   content: "How are y'all #COLLEGEmates",
+    //   content: "New #TWeetstf #TES$TING #WITHCAPS",
     // });
 
     // console.log(tweet);
