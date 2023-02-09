@@ -5,6 +5,7 @@ const tweetSchema = new mongoose.Schema(
     content: {
       type: String,
       required: true,
+      max: [250, "Tweet connot be more than 250 characters."],
     },
     hashtags: [
       {
