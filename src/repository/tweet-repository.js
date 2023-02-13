@@ -1,25 +1,14 @@
+import CrudRepository from "./crud-repository.js";
 import Tweet from "../models/tweet.js";
 
-class TweetRepository {
+class TweetRepository extends CrudRepository {
+  constructor() {
+    super(Tweet);
+  }
+
   async create(data) {
     try {
       const tweet = await Tweet.create(data);
-      return tweet;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  async get(Id) {
-    try {
-      const tweet = await Tweet.findById(Id);
-      return tweet;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  async destroy(tweetId) {
-    try {
-      const tweet = await Tweet.findByIdAndRemove(tweetId);
       return tweet;
     } catch (error) {
       console.log(error);
