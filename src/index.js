@@ -12,10 +12,8 @@ const startAndPrepareServer = async () => {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 
-  console.log("Before passport in index.js");
   app.use(Passport.initialize());
   passportAuth(Passport);
-  console.log("After passport in index.js");
 
   app.use("/api", apiRoutes);
 
